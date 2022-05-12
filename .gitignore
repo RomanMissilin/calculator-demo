@@ -35,3 +35,4 @@ build/
 /mvnw.cmd
 /pom.xml
 /src/test/java/calculator/calculatordemo/CalculatorDemoApplicationTests.java
+/src/main/resources/application.properties
