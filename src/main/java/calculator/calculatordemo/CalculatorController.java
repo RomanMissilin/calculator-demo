@@ -6,35 +6,35 @@ import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
 @RestController
-public abstract class CalculatorController implements CalculatorInterface {
+public class CalculatorController implements CalculatorInterface {
     private final CalculatorService calculatorService;
 
     private CalculatorController(CalculatorService calculatorService) {
         this.calculatorService = calculatorService;
     }
 
-    @RequestMapping (path = "/calculator")
+    @RequestMapping(path = "/calculator")
     public String welcome() {
-        return calculatorService.Welcome();
+        return calculatorService.welcome();
     }
 
-    @GetMapping(path = "/plus")
-    public String addition(@RequestParam("num1") int num1, @RequestParam("num2") int num2) {
-        return calculatorService.Addition(num1, num2);
+    @GetMapping(path = "/calculator/plus")
+    public int addition(@RequestParam("num1") int num1, @RequestParam("num2") int num2) {
+        return calculatorService.addition(num1, num2);
     }
 
-    @GetMapping(path = "/minus")
-    public String subtraction(@RequestParam("num1") int num1, @RequestParam("num2") int num2) {
-        return calculatorService.Subtraction(num1, num2);
+    @GetMapping(path = "/calculator/minus")
+    public int subtraction(@RequestParam("num1") int num1, @RequestParam("num2") int num2) {
+        return calculatorService.subtraction(num1, num2);
     }
 
-    @GetMapping(path = "/multiply")
-    public String multiplication(@RequestParam("num1") int num1, @RequestParam("num2") int num2) {
-        return calculatorService.Multiplication(num1, num2);
+    @GetMapping(path = "/calculator/multiply")
+    public int multiplication(@RequestParam("num1") int num1, @RequestParam("num2") int num2) {
+        return calculatorService.multiplication(num1, num2);
     }
 
-    @GetMapping(path = "/divide")
-    public String division(@RequestParam("num1") int num1, @RequestParam("num2") int num2) {
-        return calculatorService.Division(num1, num2);
+    @GetMapping(path = "/calculator/divide")
+    public int division(@RequestParam("num1") int num1, @RequestParam("num2") int num2) {
+        return calculatorService.division(num1, num2);
     }
 }

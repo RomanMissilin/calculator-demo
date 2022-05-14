@@ -2,13 +2,13 @@ package calculator.calculatordemo;
 
 public interface CalculatorInterface {
 
-    String Welcome();
+    String welcome();
 
-    String Addition(int num1, int num2);
+    int addition(int num1, int num2);
 
-    String Subtraction(int num1, int num2);
+    int subtraction(int num1, int num2);
 
-    String Multiplication(int num1, int num2);
+    int multiplication(int num1, int num2);
 
-    String Division(int num1, int num2);
+    int division(int num1, int num2);
 }
