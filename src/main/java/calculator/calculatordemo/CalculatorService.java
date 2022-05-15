@@ -9,27 +9,27 @@ public class CalculatorService implements CalculatorInterface {
         return "Добро пожаловать в калькулятор";
     }
 
-    public int addition(int num1, int num2) {
+    public String addition(int num1, int num2) {
         int sum = 0;
         sum = num1 + num2;
-        return sum;
+        return "sum";
     }
 
-    public int subtraction(int num1, int num2) {
+    public String subtraction(int num1, int num2) {
         int sum = 0;
         sum = num1 - num2;
-        return sum;
+        return "sum";
     }
 
-    public int multiplication(int num1, int num2) {
+    public String multiplication(int num1, int num2) {
         int sum = 0;
         sum = num1 * num2;
-        return sum;
+        return "sum";
     }
 
-    public int division(int num1, int num2) {
+    public String division(int num1, int num2) {
         int sum = 0;
         sum = num1 / num2;
-        return String.valueOf(sum);
+        return "sum";
     }
 }
