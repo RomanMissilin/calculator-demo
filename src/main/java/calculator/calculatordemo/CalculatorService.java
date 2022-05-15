@@ -12,24 +12,24 @@ public class CalculatorService implements CalculatorInterface {
     public String addition(int num1, int num2) {
         int sum = 0;
         sum = num1 + num2;
-        return "sum";
+        return String.valueOf(sum);
     }
 
     public String subtraction(int num1, int num2) {
         int sum = 0;
         sum = num1 - num2;
-        return "sum";
+        return String.valueOf(sum);
     }
 
     public String multiplication(int num1, int num2) {
         int sum = 0;
         sum = num1 * num2;
-        return "sum";
+        return String.valueOf(sum);
     }
 
     public String division(int num1, int num2) {
         int sum = 0;
         sum = num1 / num2;
-        return "sum";
+        return String.valueOf(sum);
     }
 }
