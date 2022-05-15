@@ -15,23 +15,23 @@ public class CalculatorController implements CalculatorInterface {
         this.calculatorService = calculatorService;
     }
 
-    @GetMapping(path = "/calculator")
+    @GetMapping()
     public String welcome() {
         return calculatorService.welcome();
     }
 
     @GetMapping(path = "/plus")
-    public String addition(@RequestParam("num1") int num1, @RequestParam("num2") int num2) {
+    public int addition(@RequestParam("num1") int num1, @RequestParam("num2") int num2) {
         return calculatorService.addition(num1, num2);
     }
 
     @GetMapping(path = "/minus")
-    public String subtraction(@RequestParam("num1") int num1, @RequestParam("num2") int num2) {
+    public int subtraction(@RequestParam("num1") int num1, @RequestParam("num2") int num2) {
         return calculatorService.subtraction(num1, num2);
     }
 
     @GetMapping(path = "/multiply")
-    public String multiplication(@RequestParam("num1") int num1, @RequestParam("num2") int num2) {
+    public int multiplication(@RequestParam("num1") int num1, @RequestParam("num2") int num2) {
         return calculatorService.multiplication(num1, num2);
     }
 
