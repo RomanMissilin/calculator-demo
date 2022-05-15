@@ -22,17 +22,20 @@ public class CalculatorController implements CalculatorInterface {
 
     @GetMapping(path = "/plus")
     public String addition(@RequestParam("num1") int num1, @RequestParam("num2") int num2) {
-        return calculatorService.addition(num1, num2);
+        int result = Integer.parseInt(calculatorService.addition(num1, num2));
+        return "num1 + num2 = " + result;
     }
 
     @GetMapping(path = "/minus")
     public String subtraction(@RequestParam("num1") int num1, @RequestParam("num2") int num2) {
-        return calculatorService.subtraction(num1, num2);
+        int result = Integer.parseInt(calculatorService.subtraction(num1, num2));
+        return "num1 + num2 = " + result;
     }
 
     @GetMapping(path = "/multiply")
     public String multiplication(@RequestParam("num1") int num1, @RequestParam("num2") int num2) {
-        return calculatorService.multiplication(num1, num2);
+        int result = Integer.parseInt(calculatorService.multiplication(num1, num2));
+        return "num1 + num2 = " + result;
     }
 
     @GetMapping(path = "/divide")
@@ -40,7 +43,8 @@ public class CalculatorController implements CalculatorInterface {
         if (num2 == 0) {
             return "Нельзя делить на ноль";
         } else {
-            return calculatorService.division(num1, num2);
+            int result = Integer.parseInt(calculatorService.division(num1, num2));
+            return "num1 + num2 = " + result;
         }
     }
 }
