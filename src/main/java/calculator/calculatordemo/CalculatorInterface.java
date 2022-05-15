@@ -10,5 +10,5 @@ public interface CalculatorInterface {
 
     int multiplication(int num1, int num2);
 
-    String division(int num1, int num2);
+    int division(int num1, int num2);
 }

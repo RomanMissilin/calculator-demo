@@ -36,9 +36,9 @@ public class CalculatorController implements CalculatorInterface {
     }
 
     @GetMapping(path = "/divide")
-    public String division(@RequestParam("num1") int num1, @RequestParam("num2") int num2) {
+    public int division(@RequestParam("num1") int num1, @RequestParam("num2") int num2) {
         if (num2 == 0) {
-            return "Нельзя делить на ноль";
+            return Integer.parseInt("Нельзя делить на ноль");
         } else {
             return calculatorService.division(num1, num2);
         }

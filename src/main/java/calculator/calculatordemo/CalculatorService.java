@@ -27,7 +27,7 @@ public class CalculatorService implements CalculatorInterface {
         return sum;
     }
 
-    public String division(int num1, int num2) {
+    public int division(int num1, int num2) {
         int sum = 0;
         sum = num1 / num2;
         return String.valueOf(sum);
