@@ -21,30 +21,30 @@ public class CalculatorController implements CalculatorInterface {
     }
 
     @GetMapping(path = "/plus")
-    public String addition(@RequestParam("num1") int num1, @RequestParam("num2") int num2) {
-        int result = Integer.parseInt(calculatorService.addition(num1, num2));
-        return "num1 + num2 = " + result;
+    public int addition(@RequestParam("num1") int num1, @RequestParam("num2") int num2) {
+        int result = calculatorService.addition(num1, num2);
+        return Integer.parseInt("num1 + num2 = " + result);
     }
 
     @GetMapping(path = "/minus")
-    public String subtraction(@RequestParam("num1") int num1, @RequestParam("num2") int num2) {
-        int result = Integer.parseInt(calculatorService.subtraction(num1, num2));
-        return "num1 + num2 = " + result;
+    public int subtraction(@RequestParam("num1") int num1, @RequestParam("num2") int num2) {
+        int result = calculatorService.subtraction(num1, num2);
+        return Integer.parseInt("num1 + num2 = " + result);
     }
 
     @GetMapping(path = "/multiply")
-    public String multiplication(@RequestParam("num1") int num1, @RequestParam("num2") int num2) {
-        int result = Integer.parseInt(calculatorService.multiplication(num1, num2));
-        return "num1 + num2 = " + result;
+    public int multiplication(@RequestParam("num1") int num1, @RequestParam("num2") int num2) {
+        int result = calculatorService.multiplication(num1, num2);
+        return Integer.parseInt("num1 + num2 = " + result);
     }
 
     @GetMapping(path = "/divide")
-    public String division(@RequestParam("num1") int num1, @RequestParam("num2") int num2) {
+    public int division(@RequestParam("num1") int num1, @RequestParam("num2") int num2) {
         if (num2 == 0) {
-            return "Нельзя делить на ноль";
+            return Integer.parseInt("Нельзя делить на ноль");
         } else {
-            int result = Integer.parseInt(calculatorService.division(num1, num2));
-            return "num1 + num2 = " + result;
+            int result = calculatorService.division(num1, num2);
+            return Integer.parseInt("num1 + num2 = " + result);
         }
     }
 }
